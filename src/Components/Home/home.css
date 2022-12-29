@@ -1,8 +1,40 @@
 .header{
-    height: 10vh;
-    background-color: aqua;
-    
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 12vh;
+    background-color: aqua; 
 }
 .nav-bar{
-    float: right;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-end;
+}
+.btn-nav{
+    width: 10%;
+    padding-top: 30px;
+    display: inline-block;
+    border: none;
+    background-color: aqua;
+    color: black;
+}
+#blog{
+    padding: 10px
+}
+.card-blog{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    width: 60%;
+    height: 30vh;
+    background-color: rgb(135, 106, 160);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+}
+#p{
+    margin-top: 10px;
 }

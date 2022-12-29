@@ -23,13 +23,13 @@
     margin-top: 10px;
 }
 .check{
+    margin-top: 10px;
     height: 20px;
     width: 20px;
 }
 #rem{
     font-size: 1.1rem;
-    margin-top: 0px;
-   
+    margin-left: 10px;
 }
 .btn{
     height: 30px;
@@ -43,6 +43,10 @@
     background-color: azure;
     color: black;
 }
+* {
+    margin: 0;
+    padding: 0;
+  }
 #forgot{
     border: none;
     background-color: aquamarine;
@@ -50,4 +54,9 @@
 .signup{
     margin-left: 10px;
     margin-top: 10px;
+}
+#signup{
+    border: none;
+    background-color: aquamarine;
+    color: blue;
 }
