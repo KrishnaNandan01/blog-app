@@ -1,0 +1,46 @@
+.blog-main-container{
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+    height: 100vh;
+}
+.blog-container{
+    margin: 20px;
+    padding: 20px;
+    height: 50%;
+    border-radius: 10px;
+    background-color: rgb(77, 113, 204);
+    width: 50%;
+}
+.input-size{
+    height: 30px;
+    width: 50%;
+    margin-top: 10px;
+}
+.desc{
+    margin-top: 10px;
+    height: 10vh;
+    width: 50%;
+}
+textarea {
+    width: 50.5%;
+    height: 15vh;
+    padding: 12px 20px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
+  #save{
+    height: 30px;
+    width: 20%;
+    margin-top: 20px;
+    background-color: green;
+    color: white;
+  }
+  #save:active{
+    background-color: aquamarine;
+  }
