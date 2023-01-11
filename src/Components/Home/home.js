@@ -2,12 +2,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import BlogContext from "../ContextApi/context";
 import "./home.css";
-// const arr = [
-//     {title:"my first blog",desc:"hsEBDHFBABcjAmNXABJDJHABF"},
-//     {title:"my first blog",desc:"hsEBDHFBABcjAmNXABJDJHABF"},
-//     {title:"my first blog",desc:"hsEBDHFBABcjAmNXABJDJHABF"},
-//     {title:"my first blog",desc:"hsEBDHFBABcjAmNXABJDJHABF"},
-// ]
+
 const Home = ()=>{
     const navigate = useNavigate();
     const {blogData} = useContext(BlogContext)

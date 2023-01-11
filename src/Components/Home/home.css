@@ -6,14 +6,16 @@
     background-color: aqua; 
 }
 .nav-bar{
+    position: relative;
     height: 20px;
+    top: -10px;
     display: flex;
     justify-content: flex-end;
     align-items:flex-end;
 }
 .btn-nav{
     width: 10%;
-    padding-top: 30px;
+    padding-top: 20px;
     display: inline-block;
     border: none;
     background-color: aqua;

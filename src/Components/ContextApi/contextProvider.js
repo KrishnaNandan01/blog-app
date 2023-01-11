@@ -1,6 +1,6 @@
 import BlogContext from "./context"
 import axios from "axios";
-import { useState } from "react";
+import {  useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
@@ -14,15 +14,23 @@ const ContextProviderDetails = (props)=>{
     const SigninUser = async()=>{
         await axios.post("https://blogapp-backend-3g3g.onrender.com/api/v1/login",loginData).then((res)=>{
             localStorage.setItem("token",res.data.token);
-            FetchData();
-        });
+            alert("signin Sucessull!")
+            navigate("/home");
+            document.location.reload();
+        }).catch((res)=>{
+            console.log("====>"+res.response.data.message);
+            alert(res.response.data.message);
+        }); 
             
     };
     const SignUpUser = ()=>{
-        console.log(signupData);
         axios.post("https://blogapp-backend-3g3g.onrender.com/api/v1/register",signupData).then((res)=>{
             console.log(res);
+            alert("signup succesfully");
             navigate("/");
+        }).catch((err)=>{
+            console.log("====>"+err.response.data.message);
+            alert(err.response.data.message);
         })
     };
     
@@ -36,12 +44,13 @@ const ContextProviderDetails = (props)=>{
         axios.get("https://blogapp-backend-3g3g.onrender.com/api/v1/posts",config).then((res)=>{
             setBlogData(res.data.users);
         }).catch((res)=>{
-            console.log("hello");
             setBlogData([]);
-        }).finally(()=>{
-            navigate("/home");
         })
     }
+
+    useEffect(()=>{
+        FetchData();
+    },[])
 
     const PostData = ()=>{
         const token = localStorage.getItem("token");
@@ -67,7 +76,7 @@ const ContextProviderDetails = (props)=>{
             blogData,
             Blog,
             setBlog,
-            PostData
+            PostData,
             }}>
         {props.children}
     </BlogContext.Provider>

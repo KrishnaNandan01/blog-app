@@ -13,7 +13,7 @@ const SignUp = ()=>{
                 alert("password does not match");
             }
             else{
-                setSignupData({...signupData,email:form.email,password:form.password});
+            
                 SignUpUser();
             }
         }
@@ -23,11 +23,17 @@ const SignUp = ()=>{
             <h1>Sign Up</h1>
             <div>
                 <div className="label">Email:</div>
-                <input className="input" type="email" onBlur={(e)=>{setForm({...form,email:e.target.value})}}/>
+                <input className="input" type="email" onBlur={(e)=>{
+                    setForm({...form,email:e.target.value});
+                    setSignupData({...signupData,email:e.target.value})
+                    }}/>
             </div>
             <div>
                 <div className="label">Password:</div>
-                <input className="input" type="password" onBlur={(e)=>{setForm({...form,password:e.target.value})}}/>
+                <input className="input" type="password" onBlur={(e)=>{
+                    setForm({...form,password:e.target.value});
+                    setSignupData({...signupData,password:e.target.value});
+                    }}/>
             </div>
             <div>
                 <div className="label">Confirm Password:</div>
